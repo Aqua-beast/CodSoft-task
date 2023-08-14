@@ -1,0 +1,35 @@
+.combined-booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem; /* Adjust the margin as needed */
+    background: url('../../images/signuplogin.jpeg');
+    width: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 2rem;
+  }
+  
+  .booking-icons {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 1rem;
+    opacity: 0.8;
+  }
+  
+  .booking-icon {
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .booking-icon.selected {
+    opacity: 0.8;
+    color: #64CCC5;
+  }
+  
+  .booking-form {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  

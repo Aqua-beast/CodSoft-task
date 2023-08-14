@@ -1,0 +1,39 @@
+.newsletter {
+    background: url('../../images/section-3.webp');
+    padding: 2rem;
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+  }
+  
+  .newsletter p {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+  }
+  
+  input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+.newsletter  button {
+    padding: 0.5rem 1rem;
+    background-color: #ffb338;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  
