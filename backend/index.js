@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const allowedOrigins = ['https://cod-soft-task.vercel.app/']; // Update with your frontend URL
 
 const corsOptions = {
-  origin: 'https://cod-soft-task.vercel.app/',
+  origin: 'https://cod-soft-task-7sz7.vercel.app/',
   credentials: true,
 };
 
