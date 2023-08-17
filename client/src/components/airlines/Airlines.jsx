@@ -59,7 +59,7 @@ const Airlines = () => {
             return;
           }
           const response = await axios.post(
-            'http://localhost:8001/airlines', formData,
+            'https://cod-soft-task.vercel.app/airlines', formData,
             {
               headers: {
                 "x-access-token": localStorage.getItem("token"),

@@ -24,7 +24,7 @@ const Auth = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:8001/${activeForm}`,
+        `https://cod-soft-task.vercel.app/${activeForm}`,
         formData
       );
       console.log('Response:', response.data.token);
