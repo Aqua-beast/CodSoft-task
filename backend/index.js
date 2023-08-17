@@ -34,6 +34,10 @@ app.use('/', carbookingRouter);
 app.use('/', loginRouter);
 app.use('/', signupRouter);
 
+app.get('/', (req, res) => {
+  res.send('hello world');
+})
+
 // mongodb connection
 mongoose.connect(mongo_db_uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
