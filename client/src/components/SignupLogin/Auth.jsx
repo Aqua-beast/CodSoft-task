@@ -22,6 +22,10 @@ const Auth = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
+  };
+
+  const handleAuth = async() => {
     try {
       const response = await axios.post(
         `https://cod-soft-task.vercel.app/${activeForm}`,
@@ -37,7 +41,7 @@ const Auth = () => {
       console.error('Error:', error.response.data);
       // Handle error, e.g., show error message
     }
-  };
+  }
 
   return (
     <div className="auth-container">
@@ -72,7 +76,7 @@ const Auth = () => {
             onChange={handleInputChange}
             required
           />
-          <button type="submit">
+          <button onClick={()=>handleAuth()} type="submit">
             {activeForm === 'signup' ? 'Sign Up' : 'Login'}
           </button>
         </form>
