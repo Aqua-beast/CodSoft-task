@@ -10,10 +10,10 @@ const port = process.env.PORT;
 const mongo_db_uri = process.env.MONGO_DB_URI;
 
 app.use(bodyParser.json());
-const allowedOrigins = ['https://cod-soft-task.vercel.app/']; // Update with your frontend URL
+
 
 const corsOptions = {
-  origin: 'https://cod-soft-task-7sz7.vercel.app/',
+  origin: 'https://cod-soft-task-lsr6.vercel.app',
   credentials: true,
 };
 
