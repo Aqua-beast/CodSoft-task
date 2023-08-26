@@ -24,7 +24,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Generate a JWT token
-    const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '24h' });
 
     res.setHeader('Set-Cookie', cookie.serialize('LoggedIn', token, { httpOnly: true, maxAge: 1000*24*60*60 }));
     res.status(200).json({ token });
