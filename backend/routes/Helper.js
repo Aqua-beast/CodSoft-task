@@ -3,7 +3,7 @@ const secretKey = require('./secretKey'); // Assuming you have a secret key stor
 
 
 function protectRoute(req, res, next) {
-   const token = req.cookies.LoggedIn; 
+   const token = req.headers["x-access-token"] 
   // Corrected to 'LoggedIn'
   // console.log(token);
   if (token) {
