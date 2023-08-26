@@ -19,7 +19,7 @@ const TransactionDetail = ({ formData, onCancel, transactionType }) => {
   const handleCancel = async () => {
     try {
       const token = localStorage.getItem("token");
-      console.log(token);
+      console.log(transactionType);
           if (!token) {
             console.error("JWT token not found");
             return;
@@ -27,7 +27,7 @@ const TransactionDetail = ({ formData, onCancel, transactionType }) => {
       const response = await axios.delete(`https://cod-soft-task.vercel.app/${transactionType}`, formData,
       {
         headers: {
-          "x-access-token": localStorage.getItem("token"),
+          "x-access-token": token,
         },
       });
       if (response.status === 200) {
