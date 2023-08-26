@@ -31,7 +31,7 @@ const Auth = () => {
         `https://cod-soft-task.vercel.app/${activeForm}`,
         formData
       );
-      console.log('Response:', response.data.token);
+      console.log('Response:', response.data);
       localStorage.setItem('token', response.data.token);
       // Handle successful response, e.g., redirect to dashboard
       if(activeForm === 'login'){
