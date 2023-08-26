@@ -31,7 +31,7 @@ const Auth = () => {
         `https://cod-soft-task.vercel.app/${activeForm}`,
         formData
       );
-      console.log('Response:', response.data);
+      // console.log('Response:', response.data);
       if(activeForm === 'signup'){
         console.log('signup');
         setActiveForm('login');
