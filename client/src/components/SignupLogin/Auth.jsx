@@ -33,6 +33,7 @@ const Auth = () => {
       );
       console.log('Response:', response.data);
       if(activeForm == 'signup'){
+        console.log('signup');
         setActiveForm('login');
       }
       localStorage.setItem('token', response.data.token);
