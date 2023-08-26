@@ -32,7 +32,11 @@ const Auth = () => {
         formData
       );
       console.log('Response:', response.data);
+      if(activeForm == 'signup'){
+        setActiveForm('login');
+      }
       localStorage.setItem('token', response.data.token);
+      console.log(token);
       // Handle successful response, e.g., redirect to dashboard
       if(activeForm === 'login'){
         Navigate('/home')
