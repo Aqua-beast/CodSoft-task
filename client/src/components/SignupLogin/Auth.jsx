@@ -32,7 +32,7 @@ const Auth = () => {
         formData
       );
       console.log('Response:', response.data);
-      if(activeForm == 'signup'){
+      if(activeForm === 'signup'){
         console.log('signup');
         setActiveForm('login');
       }
