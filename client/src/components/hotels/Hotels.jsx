@@ -30,7 +30,7 @@ const Hotels = () => {
 
     const handleHotel = async () => {
         try {
-            const response = await axios.post('https://cod-soft-task.vercel.app/hotels', formData,
+            const response = await axios.post('https://cod-soft-task-1c1el0kd8-aqua-beast.vercel.app/hotels', formData,
                 {
                     headers: {
                         "x-access-token": localStorage.getItem("token"),

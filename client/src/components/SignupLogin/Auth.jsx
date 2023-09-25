@@ -28,7 +28,7 @@ const Auth = () => {
   const handleAuth = async() => {
     try {
       const response = await axios.post(
-        `https://cod-soft-task.vercel.app/${activeForm}`,
+        `https://cod-soft-task-1c1el0kd8-aqua-beast.vercel.app/${activeForm}`,
         formData
       );
       // console.log('Response:', response.data);
