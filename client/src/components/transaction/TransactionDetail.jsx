@@ -8,8 +8,6 @@ const TransactionDetail = ({ formData, onCancel, transactionType }) => {
 
   const handleConfirm = async () => {
     try {
-      // You can use the formData to send the transaction details to the server
-      // For example, axios.post('https://cod-soft-task.vercel.app/confirm-booking', formData);
       setIsConfirmed(true);
     } catch (error) {
       console.error('Error:', error.response.data);
@@ -19,15 +17,16 @@ const TransactionDetail = ({ formData, onCancel, transactionType }) => {
   const handleCancel = async () => {
     try {
       const token = localStorage.getItem("token");
+      console.log(token);
       console.log(transactionType);
           if (!token) {
             console.error("JWT token not found");
             return;
           }
-      const response = await axios.delete(`https://cod-soft-task.vercel.app/${transactionType}`, formData,
+      const response = await axios.delete(`http://localhost:3001/${transactionType}`, formData,
       {
         headers: {
-          "x-access-token": token,
+          "x-access-token": localStorage.getItem("token"),
         },
       });
       if (response.status === 200) {
@@ -87,7 +86,7 @@ const TransactionDetail = ({ formData, onCancel, transactionType }) => {
         {!isConfirmed ? (
           <>
             <button onClick={handleConfirm}>Confirm Booking</button>
-            <button onClick={()=>handleCancel()}>Cancel</button>
+            <button onClick={handleCancel}>Cancel</button>
           </>
         ) : (
           <p className="confirmed-message">Booking confirmed! Have a safe trip!</p>

@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 const corsOptions = {
-  origin: 'https://cod-soft-task-lsr6.vercel.app',
+  origin: 'http://localhost:3000',
   credentials: true,
 };
 

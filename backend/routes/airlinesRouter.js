@@ -25,7 +25,7 @@ airlinesRouter.post('/airlines', protectRoute, async (req, res) => {
   }
 });
 
-airlinesRouter.delete('/airlines', protectRoute, async (req, res) => {
+airlinesRouter.delete('/airlines', async (req, res) => {
   try {
     const airdata = req.body;
     const airlines = await Airlines.findOneAndDelete(airdata);

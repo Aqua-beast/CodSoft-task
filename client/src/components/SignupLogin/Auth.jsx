@@ -28,7 +28,7 @@ const Auth = () => {
   const handleAuth = async() => {
     try {
       const response = await axios.post(
-        `https://cod-soft-task.vercel.app/${activeForm}`,
+        `http://localhost:3001/${activeForm}`,
         formData
       );
       // console.log('Response:', response.data);
@@ -37,7 +37,7 @@ const Auth = () => {
         setActiveForm('login');
       }
       localStorage.setItem('token', response.data.token);
-      console.log(token);
+      console.log(response.data.token);
       // Handle successful response, e.g., redirect to dashboard
       if(activeForm === 'login'){
         Navigate('/home')

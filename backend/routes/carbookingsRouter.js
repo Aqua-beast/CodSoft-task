@@ -25,7 +25,7 @@ carBookingRouter.post('/carbookings', protectRoute, async (req, res) => {
   }
 });
 
-carBookingRouter.delete('/carbookings/', protectRoute, async (req, res) => {
+carBookingRouter.delete('/carbookings', async (req, res) => {
   try {
     const carData = req.body;
     const carBookings = await CarBookings.findOneAndDelete(carData);

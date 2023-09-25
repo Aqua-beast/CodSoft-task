@@ -25,7 +25,7 @@ hotelsRouter.post('/hotels', protectRoute, async (req, res) => {
   }
 });
 
-hotelsRouter.delete('/hotels', protectRoute, async (req, res) => {
+hotelsRouter.delete('/hotels', async (req, res) => {
   try {
     const hoteldata = req.body;
     const hotels = await Hotels.findOneAndDelete(hoteldata);

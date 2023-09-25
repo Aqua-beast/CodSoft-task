@@ -30,7 +30,13 @@ const Hotels = () => {
 
     const handleHotel = async () => {
         try {
-            const response = await axios.post('https://cod-soft-task.vercel.app/hotels', formData);
+            const response = await axios.post('http://localhost:3001/hotels', formData,
+                {
+                    headers: {
+                        "x-access-token": localStorage.getItem("token"),
+                    },
+                }
+            );
             if (response.status === 200) {
                 setIsBookingConfirmed(true);
             } else {
@@ -111,7 +117,7 @@ const Hotels = () => {
                         <option value="double">Double Room</option>
                         <option value="suite">Suite</option>
                     </select>
-                    <button onClick={()=>handleHotel()} type="submit">Book Now</button>
+                    <button onClick={() => handleHotel()} type="submit">Book Now</button>
                 </form>
             )}
         </div>
