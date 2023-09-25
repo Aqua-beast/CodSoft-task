@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://vercel.com/aqua-beast/cod-soft-task-lsr6/eWgaTMxfWXHPNj7igbz7VpTditL2',
   credentials: true,
 };
 

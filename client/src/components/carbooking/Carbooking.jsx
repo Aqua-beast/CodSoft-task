@@ -33,7 +33,7 @@ const Carbooking = () => {
                 console.error("JWT token not found");
                 return;
             }
-            const response = await axios.post('http://localhost:3001/carbookings', formData, 
+            const response = await axios.post('https://cod-soft-task.vercel.app/carbookings', formData, 
             {
                 headers: {
                     "x-access-token": localStorage.getItem("token"),
